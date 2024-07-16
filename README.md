@@ -15,7 +15,6 @@
   <p align="center">
     Get to know me!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
     
 </div>
 
@@ -60,10 +59,14 @@ I have been into webdev for a bit now and this project is a way for me to displa
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Google phone - [Swap](<a href=”tel:+1-877-538-5888″>1-877-538-5888</a>) 
 
 Project Link: [Swap's Portfolio](https://github.com/Pogo-Bash/Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+<a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
