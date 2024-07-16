@@ -30,7 +30,7 @@ I have been into WebDev for a bit now and this project is a way for me to displa
 
 
 ### Built With
-* [![Vue][Vue.js]][Vue-url]
+[![Vue][Vue.js]][Vue-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
