@@ -30,8 +30,10 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -40,7 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Website Preview](https://swapdevs.com)
+[![Product Name Screen Shot][product-screenshot]](https://swapdevs.com)
 
 I have been into webdev for a bit now and this project is a way for me to display my skills and experience in webdev and also to get experience with the newest webdev technologies.
 
@@ -57,9 +59,9 @@ I have been into webdev for a bit now and this project is a way for me to displa
 <!-- CONTACT -->
 ## Contact
 
-Google phone - [Swap](<a href=”tel:+1-877-538-5888″>1-877-538-5888</a>) 
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [Swap's Portfolio](https://github.com/Pogo-Bash/Portfolio/)
+Project Link: [https://github.com/Pogo-Bash/Portfolio/](https://github.com/Pogo-Bash/Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,4 +69,5 @@ Project Link: [Swap's Portfolio](https://github.com/Pogo-Bash/Portfolio/)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+
 <a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
