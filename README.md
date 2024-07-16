@@ -18,28 +18,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
     
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -60,7 +38,7 @@ I have been into WebDev for a bit now and this project is a way for me to displa
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Contact me!!! - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [Swap's Website](https://github.com/Pogo-Bash/Portfolio/)
 
