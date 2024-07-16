@@ -1,4 +1,4 @@
-<a id="readme-top"></a>
+<a id="readme-top"></a
 [![MIT License][license-shield]][license-url]
 
 
@@ -30,10 +30,8 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -42,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://swapdevs.com)
+[![Website Preview](https://swapdevs.com)
 
 I have been into webdev for a bit now and this project is a way for me to display my skills and experience in webdev and also to get experience with the newest webdev technologies.
 
