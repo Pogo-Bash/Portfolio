@@ -15,10 +15,10 @@
   <p align="center">
     Get to know me!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
     
 </div>
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![Site Preview]](https://swapdevs.com)
@@ -48,10 +48,12 @@ Project Link: [Swap's Website](https://github.com/Pogo-Bash/Portfolio/)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+<a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
