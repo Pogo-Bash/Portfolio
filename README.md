@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="readme/logo.png" alt="Logo" width="80" height="80">
+    <img src="readme/logo.png" alt="Logo" width="200" height="100">
   </a>
 
   <h3 align="center">Swap's Personal Portfolio and Blog</h3>
