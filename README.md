@@ -25,7 +25,6 @@
 
 I have been into WebDev for a bit now and this project is a way for me to display my skills and experience in WebDev and also to get experience with the newest webdev technologies.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -33,7 +32,6 @@ I have been into WebDev for a bit now and this project is a way for me to displa
 [![Vue][Vue.js]][Vue-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
@@ -41,10 +39,6 @@ I have been into WebDev for a bit now and this project is a way for me to displa
 Contact me!!! - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [Swap's Website](https://github.com/Pogo-Bash/Portfolio/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
