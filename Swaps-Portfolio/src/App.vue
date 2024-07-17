@@ -21,9 +21,6 @@
       </video>
     </div>
     <main>
-      <div class="acrylic shadow">Acrylic material!</div>
-      <div class="acrylic shadow">Acrylic material!</div>
-      <div class="acrylic shadow">Acrylic material!</div>
     </main>
   </div>
 </template>
@@ -207,8 +204,8 @@ html, body, #app {
   padding: 4em 6em;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   margin: 7px;
 }
 
