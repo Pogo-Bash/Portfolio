@@ -19,8 +19,8 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+![image](https://github.com/user-attachments/assets/58215266-bc6f-4578-b8a4-c53c7bcfef68)
 
-[![Site Preview]](https://swapdevs.com)
 
 I have been into WebDev for a bit now and this project is a way for me to display my skills and experience in WebDev and also to get experience with the newest webdev technologies.
 
@@ -42,6 +42,7 @@ Project Link: [Swap's Website](https://github.com/Pogo-Bash/Portfolio/)
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 <a href="https://github.com/othneildrew/Best-README-Template"><strong>Read me based on»</strong></a>
+
 
 
 
