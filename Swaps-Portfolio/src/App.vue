@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app" id="app">
     <nav class="navbar">
       <div class="navbar-brand" ref="navbarBrand">Brand</div>
       <div class="navbar-toggle" @click="toggleMenu" :class="{ 'is-active': isMenuActive }">
@@ -8,10 +8,10 @@
         <span></span>
       </div>
       <ul class="navbar-menu" :class="{ 'is-active': isMenuActive }">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home" @click.prevent="scrollToSection('home')">Home</a></li>
+        <li><a href="#about" @click.prevent="scrollToSection('about')">About</a></li>
+        <li><a href="#services" @click.prevent="scrollToSection('services')">Services</a></li>
+        <li><a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
     </nav>
     <div class="video-container">
@@ -21,6 +21,10 @@
       </video>
     </div>
     <main>
+      <div id="home" class="section">Home Section</div>
+      <div id="about" class="section">About Section</div>
+      <div id="services" class="section">Services Section</div>
+      <div id="contact" class="section">Contact Section</div>
     </main>
   </div>
 </template>
@@ -40,6 +44,14 @@ const loadNavbarBrand = () => {
   if (!isBrandLoaded.value) {
     isBrandLoaded.value = true;
     navbarBrand.value.innerHTML = 'Swap\'s Portfolio';
+  }
+};
+
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    isMenuActive.value = false;
   }
 };
 
@@ -73,6 +85,17 @@ html, body, #app {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.app {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .video-container {
@@ -193,20 +216,19 @@ html, body, #app {
   }
 }
 
-.main {
+main {
+  margin-top: 100px; /* Adjusted to be right under the navbar */
+}
+
+.section {
+  min-height: 200px;
+  outline: 2px solid black;
+  margin: 100vh 0; /* Add vertical spacing between sections */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-}
-
-.acrylic {
-  padding: 4em 6em;
-  position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  margin: 7px;
+  font-size: 2em;
+  color: white;
 }
 
 body {
