@@ -16,10 +16,12 @@
     </nav>
     <div class="video-container">
       <video id="bg-video" autoplay muted loop playsinline>
-        <source src="./assets/background.webm" type="video/webm">
+        <source src="./assets/background.webm" type="video/webm" id="webm-source">
+        <source src="./assets/beach.mp4" type="video/mp4" id="mp4-source">
         Your browser does not support the video tag.
       </video>
     </div>
+
     <main>
       <div id="home" class="section">Home Section</div>
       <div id="about" class="section">About Section</div>
@@ -49,8 +51,11 @@ const loadNavbarBrand = () => {
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
+  const offset = -100; // Adjust this value to add or subtract from the scroll position
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+    const scrollToPosition = sectionPosition + offset;
+    window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
     isMenuActive.value = false;
   }
 };
@@ -75,6 +80,31 @@ onMounted(() => {
   );
 
   observer.observe(navbarBrand.value);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var video = document.getElementById('bg-video');
+  var webmSource = document.getElementById('webm-source');
+  var mp4Source = document.getElementById('mp4-source');
+
+  // Function to detect mobile device
+  function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  // Check if the device is mobile
+  if (isMobileDevice()) {
+    // Pause the video before changing the source
+    video.pause();
+
+    // Set the new source for mobile
+    video.setAttribute('src', mp4Source.src);
+    webmSource.remove(); // Remove the webm source if present
+
+    // Load and play the new video
+    video.load();
+    video.play();
+  }
 });
 </script>
 
