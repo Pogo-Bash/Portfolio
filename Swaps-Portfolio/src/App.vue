@@ -17,7 +17,7 @@
     <div class="video-container">
       <video id="bg-video" autoplay muted loop playsinline>
         <source src="./assets/background.webm" type="video/webm" id="webm-source">
-        <source src="./assets/mobile.mp4" type="video/mp4" id="mp4-source">
+        <source src="./assets/mobile.webm" type="video/mp4" id="mp4-source">
         Your browser does not support the video tag.
       </video>
     </div>
