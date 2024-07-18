@@ -14,6 +14,9 @@
         <li><a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a></li>
       </ul>
     </nav>
+    <div class="header">
+      HEY I'M SWAP
+    </div>
     <div class="video-container">
       <video id="bg-video" autoplay muted loop playsinline>
         <source src="./assets/background.webm" type="video/webm" id="webm-source">
@@ -109,6 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Blockletter';
+  src: url('/path-to-your-font/Blockletter.otf') format('opentype');
+}
+
 html, body, #app {
   margin: 0;
   padding: 0;
@@ -159,7 +167,7 @@ html, body, #app {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10000;
   box-sizing: border-box;
 }
 
@@ -246,6 +254,23 @@ html, body, #app {
   }
 }
 
+.header {
+  position: absolute;
+  top: 0; /* Adjust the top position to fit your layout */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 26em; /* Large font size */
+  font-weight: bold;
+  font-family: 'Blockletter', Arial, sans-serif;
+  z-index: 1000; /* High z-index to ensure it stays on top */
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5); /* Light shadow */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #f3ec78, #af4261); /* Light gradient */
+}
+
+
 main {
   margin-top: 100px; /* Adjusted to be right under the navbar */
 }
@@ -253,12 +278,21 @@ main {
 .section {
   min-height: 200px;
   outline: 2px solid black;
-  margin: 100vh 0; /* Add vertical spacing between sections */
+  margin: 200vh 0; /* Vertical spacing between sections */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   color: white;
+  position: relative; /* Ensure sections are positioned correctly */
+  z-index: 1; /* Lower z-index than .header */
+  font-weight: bold;
+  font-family: 'Blockletter', Arial, sans-serif;
+  z-index: 1000; /* High z-index to ensure it stays on top */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, #fff, #E1D9D1);
 }
 
 body {
