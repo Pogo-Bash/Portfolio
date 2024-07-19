@@ -256,19 +256,32 @@ html, body, #app {
 
 .header {
   position: absolute;
-  top: 0; /* Adjust the top position to fit your layout */
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 26em; /* Large font size */
+  font-size: 26em;
   font-weight: bold;
   font-family: 'Blockletter', Arial, sans-serif;
-  z-index: 1000; /* High z-index to ensure it stays on top */
-  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5); /* Light shadow */
+  z-index: 1000;
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(45deg, #f3ec78, #af4261); /* Light gradient */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
 }
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 13em; /* Adjusted for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 8em; /* Adjusted for smaller mobile screens */
+  }
+}
+
 
 
 main {
