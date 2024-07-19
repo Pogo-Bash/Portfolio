@@ -273,12 +273,14 @@ html, body, #app {
 @media (max-width: 768px) {
   .header {
     font-size: 13em; /* Adjusted for mobile */
+    top: 10%; /* Adjust top position */
   }
 }
 
 @media (max-width: 480px) {
   .header {
     font-size: 8em; /* Adjusted for smaller mobile screens */
+    top: 15%; /* Adjust top position */
   }
 }
 
