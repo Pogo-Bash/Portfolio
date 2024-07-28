@@ -26,10 +26,39 @@
     </div>
 
     <main>
-      <div id="home" class="section">Home Section</div>
-      <div id="about" class="section">About Section</div>
-      <div id="services" class="section">Services Section</div>
-      <div id="contact" class="section">Contact Section</div>
+      <div id="home" class="section">
+        <h1>Home Section</h1>
+        <p>I have been into WebDev for a bit now and this project is a way for me to display my skills and experience in WebDev and also to get experience with the newest webdev technologies.</p>
+       
+      </div>
+      <div id="projects" class="section">
+    <h1>Projects Section</h1>
+    <p>I have worked on a few projects most notably I have made a website for local band Ochin Pakhi</p>
+    <div class="ochin-pakhi-display">
+      <div 
+        class="image-container"
+        :class="{ 'hovered': isHovered }"
+        @mouseenter="isHovered = true"
+        @mouseleave="isHovered = false"
+        @click="openOchinPakhiSite"
+      >
+        <img src="./assets/ochin.png" alt="Ochin Pakhi Bengali Band" />
+        <div class="overlay">
+          <span>Visit Ochin Pakhi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div id="services" class="section">
+        <h1>Services Section</h1>
+        <p>This is a paragraph within the Services section.</p>
+        <p>Additional paragraph within the Services section.</p>
+      </div>
+      <div id="contact" class="section">
+        <h1>Contact Section</h1>
+        <p>This is a paragraph within the Contact section.</p>
+        <p>Additional paragraph within the Contact section.</p>
+      </div>
     </main>
   </div>
 </template>
@@ -109,6 +138,12 @@ document.addEventListener('DOMContentLoaded', function () {
     video.play();
   }
 });
+
+const openOchinPakhiSite = () => {
+  window.open('https://ochin-pakhi-bengali-band.onrender.com', '_blank');
+};
+
+
 </script>
 
 <style scoped>
@@ -116,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
   font-family: 'Blockletter';
   src: url('/path-to-your-font/Blockletter.otf') format('opentype');
 }
+
 
 html, body, #app {
   margin: 0;
@@ -284,32 +320,40 @@ html, body, #app {
   }
 }
 
-
-
 main {
   margin-top: 100px; /* Adjusted to be right under the navbar */
 }
 
 .section {
   min-height: 200px;
-  outline: 2px solid black;
   margin: 200vh 0; /* Vertical spacing between sections */
   display: flex;
+  flex-direction: column; /* Stack heading and paragraphs vertically */
   align-items: center;
   justify-content: center;
   font-size: 2em;
-  color: white;
   position: relative; /* Ensure sections are positioned correctly */
   z-index: 1; /* Lower z-index than .header */
-  font-weight: bold;
+  outline: 2px solid black; /* Added black outline around sections */
+  padding: 20px; /* Added padding inside sections */
+  background: rgba(0, 0, 0, 0.5); /* Added background color */
+  border-radius: 10px; /* Added border radius */
+}
+
+.section h1 {
+  margin-bottom: 20px; /* Spacing between heading and paragraphs */
   font-family: 'Blockletter', Arial, sans-serif;
-  z-index: 1000; /* High z-index to ensure it stays on top */
+  color: #fff;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-image: linear-gradient(45deg, #fff, #E1D9D1);
 }
 
+.section p {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
 body {
   background: url("https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?w=700") center/cover;
   background-attachment: fixed;
@@ -317,4 +361,89 @@ body {
   font: 1em/1.4 Sans-serif;
   color: #fff;
 }
-</style>
+.ochin-pakhi-display {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  cursor: pointer;
+}
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+  filter: blur(5px);
+}
+.image-container:hover .overlay {
+  opacity: 1;
+}
+.ochin-pakhi-display:hover {
+  transform: translateY(-5px);
+
+  @media (max-width: 768px) {
+  .section {
+    font-size: 1.2em;
+    margin: 50vh 0; /* Further reduced spacing for mobile */
+  }
+
+  .section h1 {
+    font-size: 1.8em;
+  }
+
+  .section p {
+    font-size: 0.9em;
+  }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  .section {
+    font-size: 1em;
+    margin: 30vh 0; /* Even less spacing for smaller screens */
+    padding: 15px;
+  }
+
+  .section h1 {
+    font-size: 1.5em;
+  }
+
+  .section p {
+    font-size: 0.8em;
+  }
+}
+}</style>
