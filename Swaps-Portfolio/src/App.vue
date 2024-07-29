@@ -431,19 +431,91 @@ body {
 }
 
 /* Media query for mobile phones */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  html, body, #app {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin-top: 60px; /* Adjusted to account for fixed navbar */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .section {
+    min-height: auto;
+    margin: 20px 0;
+    width: 90%;
+    max-width: 500px;
     font-size: 1em;
-    margin: 30vh 0; /* Even less spacing for smaller screens */
     padding: 15px;
   }
 
   .section h1 {
     font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .section p {
+    font-size: 0.9em;
+  }
+
+  .header {
+    font-size: 3em;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .video-container {
+    height: 100%;
+    position: fixed;
+  }
+
+  #bg-video {
+    object-fit: cover;
+  }
+
+  .navbar {
+    padding: 0.5em 1em;
+  }
+
+  .navbar-brand {
+    font-size: 1.2em;
+  }
+
+  .ochin-pakhi-display {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .section h1 {
+    font-size: 1.3em;
   }
 
   .section p {
     font-size: 0.8em;
   }
+
+  .header {
+    font-size: 2em;
+  }
 }
+
 }</style>
