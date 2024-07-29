@@ -1,5 +1,6 @@
 <template>
   <div class="app" id="app">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <nav class="navbar">
       <div class="navbar-brand" ref="navbarBrand">Brand</div>
       <div class="navbar-toggle" @click="toggleMenu" :class="{ 'is-active': isMenuActive }">
@@ -432,10 +433,20 @@ body {
 
 /* Media query for mobile phones */
 @media (max-width: 768px) {
-  html, body, #app {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  #app {
     overflow-x: hidden;
     overflow-y: auto;
     height: auto;
+    width: 100%;
+    position: relative;
   }
 
   .app {
@@ -445,11 +456,12 @@ body {
   }
 
   main {
-    margin-top: 60px; /* Adjusted to account for fixed navbar */
+    margin-top: 80px; /* Adjusted to account for fixed navbar and header */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
   }
 
   .section {
@@ -459,6 +471,7 @@ body {
     max-width: 500px;
     font-size: 1em;
     padding: 15px;
+    box-sizing: border-box;
   }
 
   .section h1 {
@@ -472,18 +485,30 @@ body {
 
   .header {
     font-size: 3em;
-    position: relative;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    position: fixed;
+    top: 60px; /* Position below navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
   }
 
   .video-container {
     height: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   #bg-video {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .navbar {
