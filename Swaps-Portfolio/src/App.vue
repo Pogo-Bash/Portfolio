@@ -52,13 +52,12 @@
   </div>
       <div id="services" class="section">
         <h1>Services Section</h1>
-        <p>This is a paragraph within the Services section.</p>
-        <p>Additional paragraph within the Services section.</p>
+        <p>I can make full stack websites with CMS using HTML CSS and JS aswell as Vue</p>
       </div>
       <div id="contact" class="section">
         <h1>Contact Section</h1>
-        <p>This is a paragraph within the Contact section.</p>
-        <p>Additional paragraph within the Contact section.</p>
+        <p>PHONE: ‪(312) 620-9171‬ <br> 
+        EMAIL: sdasgupta@eths202.org</p>
       </div>
     </main>
   </div>
