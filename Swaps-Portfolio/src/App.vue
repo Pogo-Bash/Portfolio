@@ -28,6 +28,11 @@ const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
                 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
 
 onMounted(() => {
+  // Force scroll to top on page load
+  window.scrollTo(0, 0)
+  document.documentElement.scrollTop = 0
+  document.body.scrollTop = 0
+
   // Smooth scroll setup with Lenis
   lenis = new Lenis({
     duration: 1.2,
@@ -41,6 +46,13 @@ onMounted(() => {
     requestAnimationFrame(raf)
   }
   requestAnimationFrame(raf)
+
+  // Reset Lenis scroll position after initialization
+  setTimeout(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    }
+  }, 100)
 
   // Easter Egg 1: Konami Code - Chaos Mode
   window.addEventListener('keydown', handleKeyDown)
