@@ -62,7 +62,7 @@ const journey = [
     year: '2023',
     story: 'Full-stack Bengali band website. Vue + Node.js + CMS. Cultural preservation through code.',
     x: 30,
-    y: 85,
+    y: 75,
     connections: ['genomics']
   },
   {
@@ -71,7 +71,7 @@ const journey = [
     year: '2023',
     story: 'Education nonprofit in Sundarbans. Simple site, big impact. Sometimes the best code is the simplest.',
     x: 55,
-    y: 85,
+    y: 75,
     connections: ['genomics']
   },
   {
@@ -80,7 +80,7 @@ const journey = [
     year: '2024',
     story: 'Realized bioinformatics could run in browsers. Privacy-first, client-side analysis. WebAssembly changed everything.',
     x: 70,
-    y: 90,
+    y: 82,
     connections: ['now']
   },
   {
@@ -89,7 +89,7 @@ const journey = [
     year: '2025',
     story: 'Building LungSeq, Webacity, questioning performativity, training to failure, coding at 2am. Nihilism with purpose.',
     x: 50,
-    y: 100,
+    y: 88,
     connections: []
   }
 ]
@@ -109,7 +109,7 @@ function toggleNode(id) {
       </h2>
 
       <!-- Mind Map Timeline -->
-      <div class="relative h-[800px] md:h-[1000px] border border-gold/20 rounded-xl bg-slate-950/30 backdrop-blur-sm overflow-hidden">
+      <div class="relative h-[900px] md:h-[1200px] border border-gold/20 rounded-xl bg-slate-950/30 backdrop-blur-sm overflow-y-auto pb-32">
         <!-- Connection Lines -->
         <svg class="absolute inset-0 w-full h-full pointer-events-none">
           <defs>
@@ -240,6 +240,30 @@ function toggleNode(id) {
   50% {
     transform: translateY(-15px);
   }
+}
+
+/* Custom scrollbar for journey container */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 rgba(212, 175, 55, 0.1);
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #f2e4c8;
 }
 
 /* Mobile adjustments */

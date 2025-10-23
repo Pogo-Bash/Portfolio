@@ -2,8 +2,10 @@
 import { ref, onMounted } from 'vue'
 import Splitting from 'splitting'
 import { gsap } from 'gsap'
+import logoSvg from '../assets/logo.svg'
 
 const nameElement = ref(null)
+const logoElement = ref(null)
 let clickCount = 0
 let clickTimeout = null
 
@@ -68,6 +70,15 @@ onMounted(() => {
     })
   }
 
+  // Logo entrance animation
+  gsap.from(logoElement.value, {
+    opacity: 0,
+    scale: 0.5,
+    y: -100,
+    duration: 1.2,
+    ease: 'elastic.out(1, 0.5)'
+  })
+
   // Splitting text animation
   setTimeout(() => {
     const results = Splitting({ target: '.split-text', by: 'chars' })
@@ -119,10 +130,24 @@ function handleNameClick() {
 
     <!-- Content -->
     <div class="relative z-10 text-center px-4">
+      <!-- Logo with triple-click easter egg -->
+      <div
+        ref="logoElement"
+        class="logo-container mx-auto mb-8 cursor-pointer select-none"
+        @click="handleNameClick"
+        title="Triple-click for easter egg"
+      >
+        <img
+          :src="logoSvg"
+          alt="Swap's Logo"
+          class="w-32 h-32 md:w-40 md:h-40 mx-auto transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+
       <!-- Name with triple-click easter egg -->
       <h1
         ref="nameElement"
-        class="text-8xl md:text-9xl font-bold mb-8 text-gradient cursor-pointer select-none split-text"
+        class="text-7xl md:text-8xl font-bold mb-8 text-gradient cursor-pointer select-none split-text"
         data-splitting
         @click="handleNameClick"
       >
@@ -163,14 +188,28 @@ function handleNameClick() {
   transform-origin: 50% 100%;
 }
 
+.logo-container {
+  filter: drop-shadow(0 10px 30px rgba(0, 212, 255, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.logo-container:hover {
+  filter: drop-shadow(0 15px 40px rgba(0, 212, 255, 0.6));
+}
+
 /* Responsive text sizing */
 @media (max-width: 640px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   p {
     font-size: 1.25rem;
+  }
+
+  .logo-container img {
+    width: 6rem;
+    height: 6rem;
   }
 }
 </style>
