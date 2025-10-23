@@ -14,7 +14,6 @@ const sections = [
   { id: 'thoughts', icon: '🧠', label: 'Thoughts' },
   { id: 'projects', icon: '💻', label: 'Projects' },
   { id: 'skills', icon: '🔬', label: 'Skills' },
-  { id: 'journey', icon: '🎯', label: 'Journey' },
   { id: 'contact', icon: '📡', label: 'Contact' }
 ]
 
