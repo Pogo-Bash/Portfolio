@@ -9,15 +9,23 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 0;
+  }
+
   body {
     @apply bg-void text-white font-sans;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative;
   }
 
-  html {
-    scroll-behavior: smooth;
+  /* Ensure page always starts at top */
+  html, body {
+    scroll-snap-type: none;
   }
 }
 
